@@ -183,3 +183,33 @@ class mcdf_rgm extends uvm_reg_block;
 		chnl2_ctrl_reg.add_hdl_path_slice($sformatf("regs[%d]",`SLV2_RW_REG),0,32);
 	endfunction
 endclass
+
+//---------------predictor--------------------//
+class mcdf_bus_env extends uvm_env;
+    mcdf_bus_agent agent;
+    mcdf_rgm rgm;
+    reg2mcdf_adapter reg2mcdf;
+    uvm_reg_predictor #(mcdf_bus_trans) mcdf2reg_predictor;
+    `uvm_component_utils(mcdf_bus_env)
+    
+    function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        agent = mcdf_bus_agent::type_id::create("agent",this);
+        if(!uvm_config_db#(mcdf_rgm)::create(this,"","rgm",rgm)) begin
+            `uvm_info("GETRGM","no top-down RGM handle is assigned",UVM_LOW)
+            rgm = mcdf_rgm::type_id::create("rgm",this);
+            `uvm_info("NEWRGM","created rgm instance locally",UVM_LOW)
+        end
+        rgm.build();
+        reg2mcdf = reg2mcdf_adapter::type_id::create("reg2mcdf",this);
+        mcdf2reg_predictor = uvm_reg_predictor #(mcdf_bus_trans)::type_id::create("mcdf2reg_predictor",this);
+        mcdf2reg_predictor.map = reg2mcdf.map;
+        mcdf2reg_predictor.adapter = reg2mcdf;
+    endfunction
+    
+    function void connect_phase(uvm_phase phase);
+        super.connect_phase(phase);
+        rgm.map.set_sequencer(agent.sequencer,reg2mcdf);
+        agent.monitor.ap.connect(mcdf2reg_predictor.bus_in);
+    endfunction
+endclass
