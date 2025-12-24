@@ -1,0 +1,73 @@
+D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_class_inst.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_class_inst.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module uvm_class_inst
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_class_inst.sv(5): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	uvm_class_inst
+
+} {} {}} D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/sv_class_inst.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/sv_class_inst.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module sv_class_inst
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/sv_class_inst.sv(5): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	sv_class_inst
+
+} {} {}} D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_compile.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_compile.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module uvm_compile
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_compile.sv(6): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+
+Top level modules:
+	uvm_compile
+
+} {} {}} D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_test_inst.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_test_inst.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package test_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_test_inst.sv(4): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling module uvm_test_inst
+-- Importing package test_pkg
+
+Top level modules:
+	uvm_test_inst
+
+} {} {}} D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/phase_order.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/phase_order.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package phase_order_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/phase_order.sv(4): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling module phase_order
+-- Importing package phase_order_pkg
+
+Top level modules:
+	phase_order
+
+} {} {}} D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/phase_order_ref.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/phase_order_ref.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package phase_order_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/phase_order_ref.sv(4): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling module phase_order_ref
+-- Importing package phase_order_pkg
+
+Top level modules:
+	phase_order_ref
+
+} {} {}} D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_config.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_config.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling interface uvm_config_if
+-- Compiling package uvm_config_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Note: (vlog-2286) D:/file_document/luke/sv_lab/uvm_project/uvm_lab1/uvm_config.sv(9): Using implicit +incdir+D:/application_program/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling module uvm_config
+-- Importing package uvm_config_pkg
+
+Top level modules:
+	uvm_config
+
+} {} {}}

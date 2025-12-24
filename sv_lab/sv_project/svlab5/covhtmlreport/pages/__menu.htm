@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link type="text/css" rel="StyleSheet" href="../css/mtitree.css"/>
+  <link type="text/css" rel="StyleSheet" href="../css/ucdb2html.css"/>
+  <link type="text/css" rel="StyleSheet" href="../css/ucdb2html_newlook.css"/>
+  <script type="text/javascript" src="../scripts/mtitree.js"></script>
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript" src="../scripts/jquery.color.js"></script>
+  <script type="text/javascript">
+  <!--
+	var fristTimeToLoad = 0;
+  function openAll() {
+    if (document.getElementById('pane1').style.display != 'none') t.openAll();
+    if (document.getElementById('pane2').style.display != 'none') d.openAll();
+    if (document.getElementById('pane3').style.display != 'none') u.openAll();
+  }
+  function closeAll() {
+    if (document.getElementById('pane1').style.display != 'none') t.closeAll();
+    if (document.getElementById('pane2').style.display != 'none') d.closeAll();
+    if (document.getElementById('pane3').style.display != 'none') u.closeAll();
+  }
+  function disableAll() {
+    document.getElementById('pane1').style.display='none';
+    document.getElementById('pane2').style.display='none';
+    document.getElementById('pane3').style.display='none';
+  }
+  function buttonsOff() {
+    document.getElementById('button1').className='button_off1';
+    document.getElementById('button2').className='button_off1';
+    document.getElementById('button3').className='button_off1';
+    
+    $('#button1').animate({ backgroundColor: '#696969', color: "a9a9a9" }, 200);
+    $('#button2').animate({ backgroundColor: '#696969', color: "a9a9a9" }, 200);
+    $('#button3').animate({ backgroundColor: '#696969', color: "a9a9a9" }, 200);
+  }
+  function drawTo(c) {
+    switch (c) {
+      case 1: t.drawTreeTo(document.getElementById('pane1')); break;
+      case 2: d.drawTreeTo(document.getElementById('pane2')); break;
+      case 3: u.drawTreeTo(document.getElementById('pane3')); break;
+    }
+  }
+  function select(c) {
+    disableAll(); document.getElementById('pane'   + c).style.display='';
+    $('#pane' + c).hide();
+    $('#pane' + c).show(500);
+    buttonsOff(); document.getElementById('button' + c).className='button_on1';
+    $('#button' + c).animate({ backgroundColor: "blue", color: "white" }, 200);    setTimeout('drawTo(' + c + ')', 500);
+	 openpage(c);
+  }
+	  function openpage (c) {
+		var page;
+		if (c == 1) {
+			var i = 1;
+			while(t.aNodes[i].url == '')
+				i=i+1;
+			page = t.aNodes[i].url;
+		}
+		else if (c == 2) {
+			var i = 1;
+			while(d.aNodes[i].url == '')
+				i=i+1;
+			page = d.aNodes[i].url;
+		}
+		else {
+			var i = 1;
+			while(u.aNodes[i].url == '')
+				i=i+1;
+			page = u.aNodes[i].url;
+		}
+		if (fristTimeToLoad == 1) //frist time to load the page
+			window.open(page,'text');
+		if(fristTimeToLoad == 0)
+			fristTimeToLoad =1;
+	  }
+  // -->
+  </script>
+</head>
+<body>
+  <table class="buttons" cellspacing="2" cellpadding="2" width="100%"><tr>
+    <td width="75" class="button_off1" id="button1"
+        title="Select testplan tree" onclick="select('1')">Testplan</td>
+    <td width="75" class="button_off1" id="button2"
+        title="Select design tree" onclick="select('2')">Design</td>
+    <td width="75" class="button_off1" id="button3"
+        title="Select design unit list" onclick="select('3')">DesUnits</td>
+    <td class="invisible">&nbsp;</td><!-- spacer -->
+  </tr></table><hr/>
+  <div class="pane" id="pane1" style="display:none;">
+  <script type="text/javascript">
+  <!--
+    t = new Tree('t');
+    
+    if (t.length() > 0) {
+      document.getElementById('pane1').style.display='';
+      document.getElementById('button1').className='button_on1';
+      document.write(t);
+    }
+  //-->
+  </script>
+  </div>
+  <div class="pane" id="pane2" style="display:none;">
+  <script type="text/javascript">
+  <!--
+    d = new Tree('d');
+    d.add(1, 0, 'fmt_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(2, 0, 'reg_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(3, 0, 'chnl_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(4, 0, 'mcdf_pkg', 'z.htm?f=1&s=126', '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(5, 4, 'mcdf_coverage', 'z.htm?f=1&s=127', '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(6, 4, 'mcdf_refmod (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(7, 4, 'mcdf_checker (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(8, 4, 'mcdf_env (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(9, 4, 'mcdf_base_test (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(10, 4, 'mcdf_data_consistence_basic_test (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(11, 4, 'mcdf_reg_read_write_test (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(12, 4, 'mcdf_reg_stability_test (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(13, 4, 'mcdf_full_random_test (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(14, 4, 'mcdf_down_stream_low_bandwidth_test (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(15, 0, 'tb', 'z.htm?f=1&s=166', '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(16, 15, 'dut', 'z.htm?f=1&s=167', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(17, 16, 'ctrl_regs_inst', 'z.htm?f=1&s=596', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(18, 16, 'slv0_inst', 'z.htm?f=1&s=638', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(19, 18, 'WRITE_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(20, 18, 'READ_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(21, 18, 'READ_DATA (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(22, 18, 'MEM_WRITE (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(23, 16, 'slv1_inst', 'z.htm?f=1&s=710', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(24, 23, 'WRITE_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(25, 23, 'READ_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(26, 23, 'READ_DATA (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(27, 23, 'MEM_WRITE (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(28, 16, 'slv2_inst', 'z.htm?f=1&s=782', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(29, 28, 'WRITE_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(30, 28, 'READ_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(31, 28, 'READ_DATA (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(32, 28, 'MEM_WRITE (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(33, 16, 'arbiter_inst', 'z.htm?f=1&s=854', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(34, 33, 'CHANEL_SELECT (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(35, 16, 'formater_inst', 'z.htm?f=1&s=929', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+d.add(36, 15, 'reg_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(37, 15, 'chnl0_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(38, 15, 'chnl1_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(39, 15, 'chnl2_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(40, 15, 'arb_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(41, 15, 'fmt_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(42, 15, 'mcdf_if (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(43, 0, 'arb_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+d.add(44, 0, 'rpt_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+
+    if ((d.length() > 0) && (t.length() < 1)) {
+      document.getElementById('pane2').style.display='';
+      document.getElementById('button2').className='button_on1';
+      document.write(d);
+    }
+  //-->
+  </script>
+  </div>
+  <div class="pane" id="pane3" style="display:none;">
+  <script type="text/javascript">
+  <!--
+    u = new Tree('u');
+    u.add(1, 0, 'work.mcdf_intf (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(2, 0, 'work.fmt_intf (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(3, 0, 'work.arb_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(4, 0, 'work.rpt_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(5, 0, 'work.fmt_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(6, 0, 'work.reg_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(7, 0, 'work.chnl_pkg (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(8, 0, 'work.mcdf_pkg', 'z.htm?f=1&s=24', '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(9, 0, 'work.tb', 'z.htm?f=1&s=25', '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(10, 0, 'work.mcdf', 'z.htm?f=1&s=26', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(11, 0, 'work.ctrl_regs', 'z.htm?f=1&s=27', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(12, 0, 'work.slave_fifo', 'z.htm?f=1&s=28', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(13, 12, 'WRITE_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(14, 12, 'READ_POINTER (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(15, 12, 'READ_DATA (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(16, 12, 'MEM_WRITE (no coverage)', null, '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(17, 0, 'work.arbiter', 'z.htm?f=1&s=100', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(18, 0, 'work.formater', 'z.htm?f=1&s=101', '', '../icons/square-ltBlue.png', 'Verilog', false, 'node','nodeSel');
+u.add(19, 0, 'work.reg_intf (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(20, 0, 'work.chnl_intf (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+u.add(21, 0, 'work.arb_intf (no coverage)', null, '', '../icons/square-ltBlue.png', 'SystemVerilog', false, 'node','nodeSel');
+
+    // document.write(u);
+  //-->
+  if (document.getElementById('button1').className == 'button_on1') select("1");
+  else if (document.getElementById('button2').className == 'button_on1') select("2");
+  else select("3");
+  </script>
+  <h3>Loading...</h3>
+  </div>
+</body>
+</html>

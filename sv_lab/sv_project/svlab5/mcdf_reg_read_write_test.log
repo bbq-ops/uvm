@@ -1,0 +1,573 @@
+# vsim -i -classdebug -solvefaildebug -coverage -coverstore D:/file_document/luke/sv_lab/sv_project/svlab5 -testname mcdf_reg_read_write_test -sv_seed random "+TESTNAME=mcdf_reg_read_write_test" -l mcdf_reg_read_write_test.log work.tb 
+# Start time: 10:47:09 on Dec 06,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.mcdf_intf(fast)
+# Loading work.fmt_intf(fast)
+# Loading work.arb_pkg(fast)
+# Loading work.rpt_pkg(fast)
+# Loading work.fmt_pkg(fast)
+# Loading work.reg_pkg(fast)
+# Loading work.chnl_pkg(fast)
+# Loading work.mcdf_pkg(fast)
+# Loading work.tb(fast)
+# Loading work.mcdf(fast)
+# Loading work.reg_intf(fast)
+# Loading work.chnl_intf(fast)
+# Loading work.arb_intf(fast)
+# Sv_Seed = 1783865753
+run -all
+# env intantiated and connected object
+# mcdf_data_consistence_basic_test instantiated and connected objects
+# env intantiated and connected object
+# mcdf_full_random_test instantiated and connected objects
+# env intantiated and connected object
+# mcdf_reg_read_write_test instantiated and connected objects
+# env intantiated and connected object
+# mcdf_reg_stability_test instantiated and connected objects
+# env intantiated and connected object
+# mcdf_down_stream_low_bandwidth_test instantiated and connected objects
+# @0 [INFO] [TEST] : ========mcdf_reg_read_write_test AT TIME                    0 STARTED========
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# rsp = 0: 
+# =======================================
+# 
+# ****************env start*****************
+# 115000 reg driver [reg_agt.driver] sent addr 00, cmd 10, data 0000c000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 135000 reg_agt.monitor monitored addr 00, cmd 10, data 0000c000
+# 140000 reg driver [reg_agt.driver] sent addr 00, cmd 01, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @140000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# rsp = 0: 
+# =======================================
+# 
+# 145000 reg driver [reg_agt.driver] sent addr 04, cmd 10, data ffff0000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 155000 reg_agt.monitor monitored addr 00, cmd 01, data 00000000
+# 165000 reg_agt.monitor monitored addr 04, cmd 10, data ffff0000
+# 170000 reg driver [reg_agt.driver] sent addr 04, cmd 01, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @170000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# rsp = 0: 
+# =======================================
+# 
+# 175000 reg driver [reg_agt.driver] sent addr 00, cmd 10, data 0000c000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 185000 reg_agt.monitor monitored addr 04, cmd 01, data 00000000
+# 195000 reg_agt.monitor monitored addr 00, cmd 10, data 0000c000
+# 200000 reg driver [reg_agt.driver] sent addr 00, cmd 01, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @200000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# rsp = 0: 
+# =======================================
+# 
+# 205000 reg driver [reg_agt.driver] sent addr 04, cmd 10, data ffff0000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 215000 reg_agt.monitor monitored addr 00, cmd 01, data 00000000
+# 225000 reg_agt.monitor monitored addr 04, cmd 10, data ffff0000
+# 230000 reg driver [reg_agt.driver] sent addr 04, cmd 01, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @230000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# rsp = 0: 
+# =======================================
+# 
+# 235000 reg driver [reg_agt.driver] sent addr 00, cmd 10, data 0000c000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 10: 
+# data = 0000c000: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 245000 reg_agt.monitor monitored addr 04, cmd 01, data 00000000
+# 255000 reg_agt.monitor monitored addr 00, cmd 10, data 0000c000
+# 260000 reg driver [reg_agt.driver] sent addr 00, cmd 01, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 01: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @260000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# rsp = 0: 
+# =======================================
+# 
+# 265000 reg driver [reg_agt.driver] sent addr 04, cmd 10, data ffff0000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 10: 
+# data = ffff0000: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 275000 reg_agt.monitor monitored addr 00, cmd 01, data 00000000
+# 285000 reg_agt.monitor monitored addr 04, cmd 10, data ffff0000
+# 290000 reg driver [reg_agt.driver] sent addr 04, cmd 01, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 04: 
+# cmd = 01: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @290000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 10: 
+# cmd = 10: 
+# data = ffffff00: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 10: 
+# cmd = 10: 
+# data = ffffff00: 
+# rsp = 0: 
+# =======================================
+# 
+# 295000 reg driver [reg_agt.driver] sent addr 10, cmd 10, data ffffff00
+# =======================================
+# reg_trans object content is as below: 
+# addr = 10: 
+# cmd = 10: 
+# data = ffffff00: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 10: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 10: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 305000 reg_agt.monitor monitored addr 04, cmd 01, data 00000000
+# 315000 reg_agt.monitor monitored addr 10, cmd 10, data ffffff00
+# 320000 reg driver [reg_agt.driver] sent addr 10, cmd 01, data 00000020
+# =======================================
+# reg_trans object content is as below: 
+# addr = 10: 
+# cmd = 01: 
+# data = 00000020: 
+# rsp = 1: 
+# =======================================
+# 
+# @320000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 14: 
+# cmd = 10: 
+# data = ffffff00: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 14: 
+# cmd = 10: 
+# data = ffffff00: 
+# rsp = 0: 
+# =======================================
+# 
+# 325000 reg driver [reg_agt.driver] sent addr 14, cmd 10, data ffffff00
+# =======================================
+# reg_trans object content is as below: 
+# addr = 14: 
+# cmd = 10: 
+# data = ffffff00: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 14: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 14: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 335000 reg_agt.monitor monitored addr 10, cmd 01, data 00000020
+# 345000 reg_agt.monitor monitored addr 14, cmd 10, data ffffff00
+# 350000 reg driver [reg_agt.driver] sent addr 14, cmd 01, data 00000020
+# =======================================
+# reg_trans object content is as below: 
+# addr = 14: 
+# cmd = 01: 
+# data = 00000020: 
+# rsp = 1: 
+# =======================================
+# 
+# @350000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 18: 
+# cmd = 10: 
+# data = ffffff00: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 18: 
+# cmd = 10: 
+# data = ffffff00: 
+# rsp = 0: 
+# =======================================
+# 
+# 355000 reg driver [reg_agt.driver] sent addr 18, cmd 10, data ffffff00
+# =======================================
+# reg_trans object content is as below: 
+# addr = 18: 
+# cmd = 10: 
+# data = ffffff00: 
+# rsp = 1: 
+# =======================================
+# 
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 18: 
+# cmd = 01: 
+# data = ffffffff: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 18: 
+# cmd = 01: 
+# data = ffffffff: 
+# rsp = 0: 
+# =======================================
+# 
+# 365000 reg_agt.monitor monitored addr 14, cmd 01, data 00000020
+# 375000 reg_agt.monitor monitored addr 18, cmd 10, data ffffff00
+# 380000 reg driver [reg_agt.driver] sent addr 18, cmd 01, data 00000020
+# =======================================
+# reg_trans object content is as below: 
+# addr = 18: 
+# cmd = 01: 
+# data = 00000020: 
+# rsp = 1: 
+# =======================================
+# 
+# @380000 [INFO] [[CMPSUC] : ERROR! value_compare val1 00000000 = val2 00000000
+# AFTER RANDOMIZATION 
+# =======================================
+# reg_generator object content is as below: 
+# addr = 00: 
+# cmd = 00: 
+# data = 00000000: 
+# =======================================
+# 
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 00: 
+# data = 00000000: 
+# rsp = 0: 
+# =======================================
+# 
+# 395000 reg_agt.monitor monitored addr 18, cmd 01, data 00000020
+# 395000 reg driver [reg_agt.driver] sent addr 00, cmd 00, data 00000000
+# =======================================
+# reg_trans object content is as below: 
+# addr = 00: 
+# cmd = 00: 
+# data = 00000000: 
+# rsp = 1: 
+# =======================================
+# 
+# @395000 [INFO] [TEST] : =============mcdf_reg_read_write_test AT TIME               395000 FINISHED===========
+# @395000 [INFO] [mcdf_chker] : 
+# ---------------------
+# CHECKER SUMMARY 
+# total comparison count: 0 
+# channel[0] comparison count:0 
+# channel[1] comparison count:0 
+# channel[2] comparison count:0 
+# total error count:0 
+# ---------------------------------------------------------------
+# 
+# @395000 [INFO] [mcdf_coverage] : 
+# -----------------------
+# COVERAGE SUMMARY 
+# total coverage : 25.0 
+# cg_mcdf_reg_write_read: 83.3 
+# cg_mcdf_reg_illegal_access coverage: 66.7 
+# cg_channel_disable coverage: 0.0 
+# cg_arbiter_priority coverage: 0.0 
+# cg_formatter_length: 0.0 
+# cg_formatter_grant coverage: 0.0 
+# -----------------------------------
+# @395000 [INFO] [REPORT] : 
+# ---------------------------------------------------------------
+# REPORT SUMMARY
+# info count: 13 
+# warning count: 0 
+# error count: 0 
+# fatal count: 0 
+# ---------------------------------------------------------------
+# 
+# ** Note: $finish    : D:/file_document/luke/sv_lab/sv_project/svlab5/mcdf_pkg.sv(643)
+#    Time: 395 ns  Iteration: 2  Instance: /tb
+# 1
+# Break in Task mcdf_pkg/mcdf_base_test::run at D:/file_document/luke/sv_lab/sv_project/svlab5/mcdf_pkg.sv line 643
+quit -sim
+# Saving coverage data in D:/file_document/luke/sv_lab/sv_project/svlab5 ...
+# End time: 10:48:55 on Dec 06,2025, Elapsed time: 0:01:46
+# Errors: 0, Warnings: 0
+vsim -i -classdebug -solvefaildebug -coverage -coverstore D:/file_document/luke/sv_lab/sv_project/svlab5 -testname mcdf_reg_stability_test -sv_seed random +TESTNAME=mcdf_reg_stability_test -l mcdf_reg_stability_test.log work.tb

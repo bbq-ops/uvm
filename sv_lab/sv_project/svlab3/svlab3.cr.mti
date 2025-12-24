@@ -1,0 +1,68 @@
+D:/file_document/luke/sv_lab/sv_project/svlab3/mcdt.v {1 {vlog -work work -vopt -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/mcdt.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module mcdt
+
+Top level modules:
+	mcdt
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/arbiter.v {1 {vlog -work work -vopt -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/arbiter.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module arbiter
+
+Top level modules:
+	arbiter
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg2_v1.sv {0 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg2_v1.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package chnl_pkg2
+** Error: (vlog-13069) D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg2_v1.sv(353): near "EOF": syntax error, unexpected end of source code, expecting class.
+
+} {4.0 5.0} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/tb2_v1.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/tb2_v1.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling interface chnl_intf
+-- Compiling module tb2
+-- Importing package chnl_pkg2
+
+Top level modules:
+	tb2
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/tb1.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/tb1.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling interface chnl_intf
+-- Compiling module tb1
+-- Importing package chnl_pkg1
+
+Top level modules:
+	tb1
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/slave_fifo.v {1 {vlog -work work -vopt -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/slave_fifo.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module slave_fifo
+
+Top level modules:
+	slave_fifo
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg1.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg1.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package chnl_pkg1
+
+Top level modules:
+	--none--
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg2.sv {1 {vlog -work work -vopt -sv -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3/chnl_pkg2.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package chnl_pkg2
+
+Top level modules:
+	--none--
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3/tb2.sv {1 {vlog -work work -vopt -sv -stats=none {D:\file_document\luke\sv_lab\sv_project\svlab3\tb2.sv}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling interface chnl_intf
+-- Compiling module tb2
+-- Importing package chnl_pkg2
+
+Top level modules:
+	tb2
+
+} {} {}}

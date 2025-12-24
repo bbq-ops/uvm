@@ -1,0 +1,11 @@
+var g_data = {
+g127:[{dummy:0},
+{name:'cg_mcdf_reg_write_read',f:1,type:1,id:128,tb:'18',h:'18',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_2.htm#262',parent:'127'},
+{name:'cg_mcdf_reg_illegal_access',f:1,type:1,id:132,tb:'12',h:'12',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_2.htm#300',parent:'127'},
+{name:'cg_channel_disable',f:1,type:1,id:138,tb:'18',h:'18',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_2.htm#338',parent:'127'},
+{name:'cg_arbiter_priority',f:1,type:1,id:146,tb:'12',h:'12',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_2.htm#393',parent:'127'},
+{name:'cg_formatter_length',f:1,type:1,id:150,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_2.htm#414',parent:'127'},
+{name:'cg_formatter_grant',f:1,type:1,id:153,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],opts:[[],['merge_instance','auto(true)']],lnk:'__HDL_srcfile_2.htm#430',parent:'127'}],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

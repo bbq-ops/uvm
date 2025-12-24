@@ -1,0 +1,29 @@
+D:/file_document/luke/sv_lab/sv_project/svlab3_v1/slave_fifo.v {1 {vlog -work work -vopt -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3_v1/slave_fifo.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module slave_fifo
+
+Top level modules:
+	slave_fifo
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3_v1/mcdt.v {1 {vlog -work work -vopt -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3_v1/mcdt.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module mcdt
+
+Top level modules:
+	mcdt
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3_v1/arbiter.v {1 {vlog -work work -vopt -stats=none D:/file_document/luke/sv_lab/sv_project/svlab3_v1/arbiter.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module arbiter
+
+Top level modules:
+	arbiter
+
+} {} {}} D:/file_document/luke/sv_lab/sv_project/svlab3_v1/chnl_pkg2(1).sv {1 {vlog -work work -vopt -sv -stats=none {D:\file_document\luke\sv_lab\sv_project\svlab3_v1\chnl_pkg2(1).sv}
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling package chnl_pkg2
+
+Top level modules:
+	--none--
+
+} {} {}}

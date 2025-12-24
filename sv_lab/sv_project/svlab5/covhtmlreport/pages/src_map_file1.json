@@ -1,0 +1,8 @@
+var g_data = {'dummy':null,
+'5':'arbiter.v',
+'6':'formater.v',
+'4':'mcdf.v',
+'2':'mcdf_pkg.sv',
+'3':'reg.v',
+'1':'slave_fifo.v',
+'7':'tb.sv'};
