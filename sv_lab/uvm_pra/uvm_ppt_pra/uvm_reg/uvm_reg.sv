@@ -81,3 +81,105 @@ class mcdf_rgm extends uvm_reg_block;
         lock_model();
     endfunction
 endclass
+//-----------------------------adapter---------------------------//
+class reg2mcdf_adapter extends uvm_reg_adapter;
+	`uvm_object_utils(reg2mcdf_adapter)
+	function new(string name = "reg2mcdf_adapter");
+		super.new(name);
+		provides_responses = 1;
+	endfunction
+	
+	function uvm_sequence_item reg2bus(const ref uvm_reg_bus_op rw);
+		mcdf_bus_trans t = mcdf_bus_trans::type_id::create("t");
+		t.cmd = (rw.kind == UVM_WRITE) ? `WRITE : `READ;
+		t.addr = rw.addr;
+		t.wdata = rw.data;
+		return t;
+	endfunction
+	
+	function void bus2reg(uvm_sequence_item bus_item,ref uvm_reg_bus_op rw);
+		mcdf_bus_trans t;
+		if(!$cast(t,bus_item)) begin
+			`uvm_fatal("NOT_MCDF_BUS_TYPE","provide bus_item is not of the correct type")
+		end
+		rw.kind = (t.cmd == `WRITE)? UVM_WRITE : UVM_READ;
+		rw.addr = t.addr;
+		rw.data = (t.cmd == `WRITE)? t.wdata:t.rdata;
+		rw.status = UVM_IS_OK;
+	endfunction
+endclass
+
+//------------adapter jic---------------------------//
+class mcdf_bus_env extends uvm_env;
+	mcdf_bus_agent agent;
+	mcdf_rgm rgm;
+	reg2mcdf_adapter reg2mcdf;
+	`uvm_component_utils(mcdf_bus_env)
+	
+	function new(string name = "mcdf_bus_env",uvm_component parent);
+		super.new(name,parent);
+	endfunction
+	
+	function void build_phase(uvm_phase phase);
+		super.build_phase(phase);
+		agent = mcdf_bus_agent::type_id::create("agent",this);
+		if(!uvm_config_db#(mcdf_rgm)::get(this,"","rgm",rgm)) begin
+			`uvm_info("GETRGM","no top down RGM handle is assigned",UVM_LOW)
+			rgm = mcdf_rgm::type_id::create("rgm",this);
+			`uvm_info("NEWRGM","CREATE rgm instance locally",UVM_LOW)
+		end
+		rgm.build();
+		rgm.map.set_auto_predict();
+		reg2mcdf = reg2mcdf_adapter::type_id::create("reg2mcdf",this);
+	endfunction
+	
+	function void connect_phase(uvm_phase phase);
+		rgm.map.set_sequencer(agent.sequencer,reg2mcdf); 
+	endfunction
+endclass
+
+class test1 extends uvm_test;
+	mcdf_bus_env env;
+	mcdf_rgm rgm;
+	`uvm_component_utils(test1)
+	
+	function void build_phase(uvm_phase);
+		super.build_phase(phase);
+		env = mcdf_bus_env::type_id::create("env",this);
+		rgm = mcdf_rgm::type_id::create("rgm",this);
+		uvm_config_db#(mcdf_rgm)::set(this,"env*","rgm",rgm);
+	endfunction
+endclass
+
+//-----------------frontdoor-------------------//
+class mcdf_example_seq extends uvm_reg_sequence;
+	mcdf_rgm rgm;
+	`uvm_object_utils(mcdf_example_seq)
+	`uvm_declare_p_sequencer(mcdf_bus_sequencer)
+	
+	task body();
+		uvm_status_e status;
+		uvm_reg_data_t data;
+		if(!uvm_config_db#(mcdf_rgm)::get(null,get_full_name(),"rgm",rgm)) begin 
+			$uvm_error("GETRGM","no top down RGM handle is assigned")
+		end
+		
+		rgm.chnl0_ctrl_reg.read(status,data,UVM_FRONTDOOR,.parent(this));
+		rgm.chnl0_ctrl_reg.write(status,'h11,UVM_FRONTDOOR,.parent(this));
+		rgm.chnl0_ctrl_reg.read(status,data,UVM_FRONTDOOR,.parent(this));
+		
+		read_reg(chnl0_ctrl_reg,status,data,UVM_FRONTDOOR);
+		write_reg(chnl0_ctrl_reg,status,'h22,UVM_FRONTDOOR);
+		read_reg(chnl0_ctrl_reg,status,data,UVM_FRONTDOOR);
+	endtask
+endclass
+
+//---------------------backdoor--------------------//
+class mcdf_rgm extends uvm_reg_block;
+	virtual function build();
+		add_hdl_path("reg_backdoor_access.dut");
+		chnl0_ctrl_reg.add_hdl_path_slice($sformatf("regs[%d]",`SLV0_RW_REG),0,32);
+		chnl1_ctrl_reg.add_hdl_path_slice($sformatf("regs[%d]",`SLV1_RW_REG),0,32);
+		chnl2_ctrl_reg.add_hdl_path_slice($sformatf("regs[%d]",`SLV2_RW_REG),0,32);
+	endfunction
+endclass
